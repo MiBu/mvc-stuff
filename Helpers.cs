@@ -97,7 +97,8 @@ namespace MiBu.Web.Helpers
                         @class = "active"
                     }).ToString();
             }
-            actionLink = helper.ActionLink(linkText, actionName, controllerName).ToString();
+            else
+                actionLink = helper.ActionLink(linkText, actionName, controllerName).ToString();
 
             builder.InnerHtml = actionLink;
             return MvcHtmlString.Create(builder.ToString());
